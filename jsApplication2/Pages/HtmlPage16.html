@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .btn {
+            width: 35px;
+            height: 35px;
+            font-family: IRANSansXFaNum;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        .mouseMoveCss {
+            background-color: darkblue;
+        }
+
+        .mouseOutCss {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        init(1000);
+        function init(n) {
+            for (var i = 0; i < n; i++) {
+                document.write('<button class="btn" onmousemove="onMouseMove(this);" ' +
+                    'onmouseout = "onMouseOut(this);">' + i
+                    + '</button>');
+
+            }
+
+        }
+        function onMouseMove(e) {
+            e.classList.remove('mouseOutCss')
+            e.classList.add('mouseMoveCss')
+
+        }
+        function onMouseOut(e) {
+            e.classList.remove('mouseMoveCss')
+            e.classList.add('mouseOutCss')
+
+        }
+    </script>
+
+</body>
+</html>

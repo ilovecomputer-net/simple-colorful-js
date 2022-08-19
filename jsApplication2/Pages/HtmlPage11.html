@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .cssA{
+            background-color: aqua;
+                            
+        }
+        .cssB {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div> </div>
+    <div> </div>
+    <div> سلام عزیزم:)</div>
+    <div> </div>
+    <div> </div>
+    <script>
+        var divs = document.getElementsByTagName('div');
+        divs[0].classList.add('cssA');
+        divs[0].innerText = 'www.ilovecomputer.ir';
+
+        divs[1].classList.add('cssB');
+        divs[1].innerText = 'ilovecomputer.ir';
+
+        divs[2].outerHTML = '<button>1234</button>';
+        
+
+    </script>
+
+</body>
+</html>

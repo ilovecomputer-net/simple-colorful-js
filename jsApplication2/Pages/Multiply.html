@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .btn {
+            background-color: aqua;
+            width: 35px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        init();
+        function init() {
+            for (var i = 1; i <= 10; i++) {
+                for (var j = 1; j <= 10; j++) {
+                    document.write('<button class="btn" onclick="btnClick(this)">' + i * j + '</button>');
+
+
+                }
+                writeLine();
+
+
+            }
+        }
+        function btnClick(e) {
+            alert(e.innerText);
+
+        }
+
+        function writeLine() {
+            document.write("<br/>");
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <input type="text" id="inp1" />
+    <br /> <br />
+    <input type="text" id="inp2" />
+    <br /> <br />
+    <input onclick="calculate();" type="submit" value="Calculate" />
+    <hr />
+    <h1 id="result"></h1>
+    <script>
+        function calculate() {
+
+            var num1 = parseInt(document.getElementById('inp1').value);
+            var num2 = parseInt(document.getElementById('inp2').value);
+            var result = document.getElementById('result');
+            result.innerHTML = num1 + num2;
+
+
+
+        }
+    </script>
+</body>
+</html>

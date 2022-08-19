@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <input id="textBox" />
+    <br /><br />
+    <button onclick="numberHandler(this)">1</button>
+    <button onclick="numberHandler(this)">2</button>
+    <button onclick="numberHandler(this)">3</button>
+    <hr />
+    <button onclick="numberHandler(this)">4</button>
+    <button onclick="numberHandler(this)">5</button>
+    <button onclick="numberHandler(this)">6</button>
+    <hr />
+    <button onclick="numberHandler(this)">7</button>
+    <button onclick="numberHandler(this)">8</button>
+    <button onclick="numberHandler(this)">9</button>
+    <hr />
+    <button onclick="numberHandler(this)">0</button>
+    <button onclick="opHandler(this)">+</button>
+    <button onclick="opHandler(this)">-</button>
+    <hr />
+    <button onclick="opHandler(this)">*</button>
+    <button onclick="opHandler(this)">/</button>
+    <button onclick="result();">=</button>
+
+    <script>
+        var num1, num2, op;
+        function numberHandler(e) {
+            var textBox = document.getElementById("textBox");
+            textBox.value += e.innerText;
+        }
+        function opHandler(e) {
+            num1 = parseInt(textBox.value);
+            op = e.innerText;
+            textBox.value = "";
+        }
+        function result() {
+            num2 = parseInt(textBox.value);
+            var res;
+            switch (op) {
+                case "*":
+                    res = num1 * num2;
+                    break;
+                case "/":
+                    res = num1 / num2;
+                    break;
+                case "-":
+                    res = num1 - num2;
+                    break;
+                case "+":
+                    res = num1 + num2;
+                    break;
+            }
+            textBox.value = res;
+
+        }
+
+
+    </script>
+</body>
+</html>

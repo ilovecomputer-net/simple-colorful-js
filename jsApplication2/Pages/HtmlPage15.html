@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    Input: <input type="text" onkeypress="return isNumber(event);" />
+    <script>
+        debugger;
+        function isNumber(e) {
+            console.log(e.KeyCode);
+            if (e.KeyCode >= 48 && e.KeyCode <= 57) {
+                return true;
+
+            }
+            return false;
+
+        }
+    </script>
+
+
+</body>
+</html>

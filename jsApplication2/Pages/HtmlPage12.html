@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <ul>
+        <li> سلام حالت چطوره</li>
+        <li name="item2"> خوبی؟</li>
+        <li> روبه راهی</li>
+    </ul>
+    <button onclick="clk()">کلیک کن!</button>
+
+    <script>
+        function clk() {
+            var items = document.getElementsByName('item2');
+            items[0].innerText = 'آره خوبم!';
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>
